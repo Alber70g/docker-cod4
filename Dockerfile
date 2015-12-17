@@ -10,4 +10,4 @@ RUN chown -R cod4:cod4 /home/cod4
 
 USER cod4
 WORKDIR /home/cod4
-ENTRYPOINT /home/cod4/cod4_lnxded +exec server.cfg +map_rotate
+ENTRYPOINT bash -c "(cd /home/cod4/ && /home/cod4/cod4_lnxded +exec server.cfg +map_rotate)"
